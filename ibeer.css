@@ -29,6 +29,9 @@ img{
 }
 .wrapper{
     width: 1000px;
+    margin-left:135px;
+    margin-right: 20px;
+
 
     /*
         TODO:
@@ -40,6 +43,7 @@ img{
 #site-header{
     /*
         TODO
+
         - Flexbox property here
     */
 }
@@ -48,19 +52,11 @@ img{
     padding: 60px 0 120px 0;
     font-size: 4em;
     background-image: url('header-img.jpg');
-    margin-left: 15%;
     width: 1000px;
-    z-index: 0;
-
-    /*
-        TODO:
-        - Add a background image "header-img.jpg"
-        make sure that the path to the image is correct
-    */
-
     background-size: cover;
     background-position: right bottom;
 }
+
 #site-header div h1,
 #site-header div h3{
     margin: 0;
@@ -74,31 +70,23 @@ img{
     color: white;
     bottom: 20px;
     text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
-    /*
-        TODO:
-        - Use the script font: 'Dancing Script' fot this text
-    */
+    font-family: 'Dancing Script', cursive;
 }
+
 #main-navigation{
     background: #444;
     display: flex;
     flex-direction: row;
-    width: 1000px;
-    margin-left:15%;
-    margin-right: 15%;
-
-
-    /*
-        TODO:
-        - Use Flexbox to arrange the navigation links
-    */
+    flex-basis: : 1000px;
 }
+
 #main-navigation a{
     display: block;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
+
 
     /*
         TODO:
@@ -118,6 +106,13 @@ main{
     padding: 20px;
     background-color: #444;
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    display: flex;
+    display: block;
+    flex-basis: 800px;
+    z-index: 1;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -60px;
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -128,6 +123,11 @@ aside{
     padding: 20px;
     background-color: #eee;
     box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
+    display: flex;
+    position: relative;
+    flex-basis: auto;
+    position: relative;
+
     /*
         TODO:
         - Flexbox: Set the starting width of this element
@@ -150,7 +150,12 @@ article{
     box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
     padding: 20px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
+
+
 article h2{
     line-height: 1em;
     font-weight: bold;
@@ -168,6 +173,7 @@ article time{
     color: #666;
 }
 article img{
+  float: right;
     /*
         TODO:
         - Float article images to the right
@@ -188,4 +194,20 @@ article footer p{
         TODO:
         - Style the site footer
     */
+}
+
+article:first-child {
+  order: 1;
+}
+
+article:nth-child(2) {
+  order:2;
+}
+
+article:nth-child(3){
+  order:3;
+}
+
+article:nth-child(4){
+  order: 4;
 }
